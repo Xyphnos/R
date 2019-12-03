@@ -12,10 +12,13 @@ let list = schedule.scheduleJob('1 * * * * *', () =>{
 
     let d = new Date();
     let day = d.getDate();
+    if (day < 10){
+        day = "0" + day;
+    }
     let month = d.getMonth() + 1;
     let year = d.getFullYear();
 
-    fetch("https://www.sodexo.fi/ruokalistat/output/daily_json/16365/" + year + "/" + month + "/" + day + "/fi")
+    fetch("https://www.sodexo.fi/ruokalistat/output/daily_json/152/" + year + "-" + month + "-" + day)
         .then(res => res.json())
         .then(json => fs.writeFile('lista.json', JSON.stringify(json), (err) => {
 
