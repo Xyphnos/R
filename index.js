@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 
 });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 80;
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });
