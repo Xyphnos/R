@@ -17,8 +17,7 @@ body{
 .li{
     border-top: 3px solid white;
     color: white;
-    font-family: Georgia;
-    font-weight: bold;
+    font-family: sans-serif;
 }
 #title{
     color: white;
