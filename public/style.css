@@ -17,6 +17,8 @@ body{
 .li{
     border-top: 3px solid white;
     color: white;
+    font-family: Georgia;
+    font-weight: bold;
 }
 #title{
     color: white;
