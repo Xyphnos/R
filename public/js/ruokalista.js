@@ -12,19 +12,23 @@ let date = ()=>{
         console.log(jsonFile.courses);
         let lista = document.querySelector("#lista");
         lista.innerHTML='';
-        for(let i=0; i<jsonFile.courses.length; i++){
+
+        const co = Object.keys(jsonFile.courses);
+        
+        for(let i=1; i <= co.length; i++){
             const ruoka = jsonFile.courses[i].title_fi;
             const ruoka2 = jsonFile.courses[i].title_en;
             console.log(ruoka);
             const hinta = jsonFile.courses[i].price;
             const tiedot = jsonFile.courses[i].properties;
 
+            const nu = document.createElement("p");
             const li = document.createElement("p");
+            nu.setAttribute('class','nu');
             li.setAttribute('class','li');
+            lista.appendChild(nu);
             lista.appendChild(li);
             li.innerHTML = ruoka + "</br>" + ruoka2 + "</br>" + " Hinta/Price: " + hinta + " " + tiedot ;
-
-
 
 
         }
