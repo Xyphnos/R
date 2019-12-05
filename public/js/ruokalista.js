@@ -14,7 +14,7 @@ let date = ()=>{
         lista.innerHTML='';
 
         const co = Object.keys(jsonFile.courses);
-        
+
         for(let i=1; i <= co.length; i++){
             const ruoka = jsonFile.courses[i].title_fi;
             const ruoka2 = jsonFile.courses[i].title_en;
